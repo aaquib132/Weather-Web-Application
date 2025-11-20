@@ -1,81 +1,146 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:  "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #ffffff;
 }
 
 body{
     background: #222;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .card{
     background-image: linear-gradient(-25deg, #7042dc 0%, #f590d8 100%);
     width: 25vw;
     height: 70vh;
-    border: 2px solid rgba(154, 154, 154, 0.75) ;
     border-radius: 20px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 2px solid rgba(154,154,154,0.75);
+    box-shadow: 0 8px 32px rgba(31,38,135,0.37);
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 600px){
+    .card{
+        width: 90vw;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .search-bar{
+        flex-direction: row;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .input{
+        width: 75%;
+        height: 2.3rem;
+        font-size: 14px;
+    }
+
+    .weather-image{
+        width: 110px;
+        margin-top: 10px;
+    }
+
+    h1{
+        font-size: 38px;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    .humidity-unit, .wind-unit{
+        font-size: 17px;
+    }
+
+    .bottom-last{
+        margin-top: 25px;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: space-between;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 900px){
+    .card{
+        width: 60vw;
+        height: auto;
+        padding-bottom: 25px;
+    }
+
+    .weather-image{
+        width: 130px;
+    }
+
+    h1{
+        font-size: 45px;
+    }
+
+    .input{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1200px){
+    .card{
+        width: 35vw;
+        height: 70vh;
+    }
 }
 
 .search-bar{
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
     gap: 10px;
-
 }
 
 .input{
-    display: flex;
-    font-size: small;
     border-radius: 9999px;
     border: none;
-    width: 70%;
+    width: 80%;
     height: 2.5rem;
     padding-left: 25px;
     color: #222 !important;
     outline: none;
+    
 }
 
 .input::placeholder{
-    color: #b4b2b2 !important;
+    color: #bebebe;
 }
 
 .input:focus{
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.593);
+    box-shadow: 0 0 8px rgba(255,255,255,0.6);
 }
-
-
 
 .search-icon{
     width: 16px;
-
 }
 
 .search-button{
-    background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
-    justify-content: center;
+    background: #fff;
     padding: 8px 9px;
     border-radius: 50%;
-    border: none;
     cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.search-button:focus{
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.593);
+    border: none;
+    transition: 0.2s;
 }
 
 .search-button:hover{
@@ -86,24 +151,15 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .weather-image{
     width: 150px;
 }
 
-.temp-in-celcius{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
 h1{
     font-size: 50px;
     font-weight: 600;
-    padding-bottom: 0 !important;
 }
 
 h2{
@@ -111,25 +167,15 @@ h2{
     text-align: center;
 }
 
-.left{
+.left, .right{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     gap: 15px;
 }
 
-.right{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
 
 .humidity-img{
-    width: 26px;
-   
+    margin-top: 13px;
+    height: 28px;   
 }
 
 .side{
@@ -148,7 +194,7 @@ h2{
 
 .bottom-last{
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin: 18px 14px 10px 14px;
+    margin: 20px 14px;
 }
+
