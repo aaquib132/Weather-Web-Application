@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  "Poppins", sans-serif;
+    color: #ffffff;
+}
+
+body{
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card{
+    background-image: linear-gradient(-25deg, #7042dc 0%, #f590d8 100%);
+    width: 25vw;
+    height: 70vh;
+    border: 2px solid rgba(154, 154, 154, 0.75) ;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+
+}
+
+.input{
+    display: flex;
+    font-size: small;
+    border-radius: 9999px;
+    border: none;
+    width: 70%;
+    height: 2.5rem;
+    padding-left: 25px;
+    color: #222 !important;
+    outline: none;
+}
+
+.input::placeholder{
+    color: #b4b2b2 !important;
+}
+
+.input:focus{
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.593);
+}
+
+
+
+.search-icon{
+    width: 16px;
+
+}
+
+.search-button{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 9px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.search-button:focus{
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.593);
+}
+
+.search-button:hover{
+    transform: scale(1.1);
+}
+
+.main-reading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-image{
+    width: 150px;
+}
+
+.temp-in-celcius{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 600;
+    padding-bottom: 0 !important;
+}
+
+h2{
+    font-weight: 500;
+    text-align: center;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.humidity-img{
+    width: 26px;
+   
+}
+
+.side{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.humidity-unit, .wind-unit{
+    font-size: 20px;
+}
+
+.unit-name{
+    font-size: 12px;
+}
+
+.bottom-last{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 18px 14px 10px 14px;
+}
